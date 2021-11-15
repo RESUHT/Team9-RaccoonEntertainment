@@ -88,6 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948903297107370056}
+  - component: {fileID: 8124471769593823073}
   m_Layer: 0
   m_Name: ABC_CL08_PiceaEngelmanniiGlauca_3.001
   m_TagString: Untagged
@@ -112,6 +113,20 @@ Transform:
   m_Father: {fileID: 5536011766260221023}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &8124471769593823073
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320645921018041725}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.44
+  m_Height: 40.98
+  m_Direction: 1
+  m_Center: {x: 4.77, y: -13.5, z: 0}
 --- !u!1 &1869145909215068159
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,6 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2589302736748226957}
+  - component: {fileID: 600835630743149815}
   m_Layer: 0
   m_Name: ABC_CL08_PiceaEngelmanniiGlauca_2.001
   m_TagString: Untagged
@@ -145,6 +161,20 @@ Transform:
   m_Father: {fileID: 5536011766260221023}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &600835630743149815
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869145909215068159}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.32
+  m_Height: 1.94
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.65, z: 0}
 --- !u!1 &1919159159178919456
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,6 +184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 403671449552406585}
+  - component: {fileID: 5452872778014567206}
   m_Layer: 0
   m_Name: ABC_CL08_PiceaEngelmanniiGlauca_5.001
   m_TagString: Untagged
@@ -179,6 +210,20 @@ Transform:
   m_Father: {fileID: 5536011766260221023}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &5452872778014567206
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919159159178919456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.21
+  m_Height: 26.81
+  m_Direction: 1
+  m_Center: {x: 0, y: -13.67, z: 0}
 --- !u!1 &2276163029930769300
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,6 +816,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6099052851212018011}
+  - component: {fileID: 1868922362857032906}
   m_Layer: 0
   m_Name: ABC_CL08_PiceaEngelmanniiGlauca_9.001
   m_TagString: Untagged
@@ -796,6 +842,20 @@ Transform:
   m_Father: {fileID: 5536011766260221023}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1868922362857032906
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4038646215857994306}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.92
+  m_Height: 26.11
+  m_Direction: 1
+  m_Center: {x: 0, y: -8.08, z: 0}
 --- !u!1 &4466619978478324448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,6 +1119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1957501216541949086}
+  - component: {fileID: 1473888067674920127}
   m_Layer: 0
   m_Name: ABC_CL08_PiceaEngelmanniiGlauca_8.001
   m_TagString: Untagged
@@ -1084,6 +1145,20 @@ Transform:
   m_Father: {fileID: 5536011766260221023}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1473888067674920127
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6076517615170237598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.99
+  m_Height: 27.45
+  m_Direction: 1
+  m_Center: {x: 0, y: -9.42, z: 0}
 --- !u!1 &6144243160283533967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,6 +1574,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3758978257528917773}
+  - component: {fileID: 939328209470453978}
   m_Layer: 0
   m_Name: ABC_CL08_PiceaEngelmanniiGlauca_1.001
   m_TagString: Untagged
@@ -1523,6 +1599,20 @@ Transform:
   m_Father: {fileID: 5536011766260221023}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &939328209470453978
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8845938106314045626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 3.28
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.87, z: 0}
 --- !u!1 &9111659085381904746
 GameObject:
   m_ObjectHideFlags: 0

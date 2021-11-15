@@ -75,3 +75,5 @@ Stone Brick Wall 001 by Rico Cilliers. CC0 license. (https://polyhaven.com/a/sto
 "Dark knight armor" (https://skfb.ly/6vY6w) by Pascualex is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
 "HELL ARENA" (https://skfb.ly/6Xy7q) by 3DMAN is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+Unity Particle Pack by Unity Technologies - Unity Asset Store, Extension Asset
