@@ -10,6 +10,11 @@ public class ItemPickup : Interactable
         PickUp();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        Interact();
+    }
+
     void PickUp()
     {
         bool wasPickedUp = Inventory.instance.Add(item);
