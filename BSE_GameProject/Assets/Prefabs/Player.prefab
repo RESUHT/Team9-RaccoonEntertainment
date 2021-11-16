@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a40ae23474bfe5743a14900d3dd3fbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DashSfx: {fileID: 3679243387897299545}
+  DashSfx: {fileID: 0}
   m_DashSpeed: 25
   m_DashTime: 0.15
   m_CanDash: 0
