@@ -7,17 +7,20 @@ public class Equipment : Item
 {
     public EquipmentSlot equipSlot;
 
-    public float meleeDamageModifier;
-    public float magicDamageModifier;
-    public float critChanceModifier;
-    public float critDamageModifier;
-    public float speedModifier;
-    public float staminaRegenModifier;
-    public float manaRegenModifier;
+    public int meleeDamageModifier;
+    public int magicDamageModifier;
+    public int critChanceModifier;
+    public int critDamageModifier;
+    public int speedModifier;
+    public int staminaRegenModifier;
+    public int manaRegenModifier;
+
+    public bool StatsApplied = false;
 
 
+    
 
 
 }
 
-public enum EquipmentSlot { Weapon, Drink, Legs, Feather1, Feather2 }
+public enum EquipmentSlot { Weapon, Drink, Legs, Feather1, Feather2, Extra }

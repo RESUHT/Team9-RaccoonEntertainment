@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2101fb62470b8340b0728ff855de5b2, type: 3}
   m_Name: Jagged Blade
   m_EditorClassIdentifier: 
-  name: New Item
-  icon: {fileID: 0}
+  name: Jagged Blade
+  icon: {fileID: 21300000, guid: cd5daaec622b3de43bb1039c68ab68f4, type: 3}
   isDefaultItem: 0
   equipSlot: 0
-  meleeDamageModifier: 1.1
+  meleeDamageModifier: 10
   magicDamageModifier: 0
   critChanceModifier: 0
   critDamageModifier: 0
   speedModifier: 0
   staminaRegenModifier: 0
   manaRegenModifier: 0
+  StatsApplied: 0

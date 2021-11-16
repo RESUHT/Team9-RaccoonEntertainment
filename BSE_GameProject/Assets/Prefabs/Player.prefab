@@ -75,6 +75,8 @@ GameObject:
   - component: {fileID: 5359825526576723915}
   - component: {fileID: 4720525039198277510}
   - component: {fileID: 4474859125874078007}
+  - component: {fileID: 6400535380951207023}
+  - component: {fileID: 4179041355596505488}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -131,12 +133,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Controller: {fileID: 3025094210257982532}
   m_Look: {fileID: 6746455169954582133}
+  cam: {fileID: 362919562006369932}
+  target: {fileID: 0}
   m_MoveSpeed: 8
-  m_Gravity: 1
+  m_Gravity: 20
   m_JumpSpeed: 10
   m_Sprinting: 0
   m_SprintModifier: 2
   m_GroundedLenience: 0.25
+  focus: {fileID: 0}
   m_Velocity: {x: 0, y: 0, z: 0}
   m_Grounded: 0
   m_Acceleration: 8
@@ -173,6 +178,7 @@ MonoBehaviour:
   m_JumpFootstepTimer: 0
   m_JumpFootstepCooldown: 0.5
   m_IsRightFoot: 1
+  m_Checkpoint: {fileID: 0}
 --- !u!114 &7735501605735139874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +242,47 @@ MonoBehaviour:
   FireballPrefab: {fileID: 8247834743366785036, guid: cd02916da6ffcbe4dbe5d0f68d10bf2f,
     type: 3}
   castPoint: {fileID: 1873846315043103869}
+--- !u!114 &6400535380951207023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3679243387897299545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 679e9404c36839942bde2ac3ae74f4ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4179041355596505488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3679243387897299545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac2c8d741b8393468d6496dff5d0fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  medamage:
+    baseValue: 20
+  armour:
+    baseValue: 0
+  speed:
+    baseValue: 1
+  critC:
+    baseValue: 5
+  critD:
+    baseValue: 2
+  madamage:
+    baseValue: 30
+  stamRegen:
+    baseValue: 0
+  manaRegen:
+    baseValue: 20
+  maxHealth: 100
 --- !u!1 &5920096719428905676
 GameObject:
   m_ObjectHideFlags: 0
