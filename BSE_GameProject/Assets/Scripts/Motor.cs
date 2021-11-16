@@ -8,6 +8,8 @@ public class Motor : MonoBehaviour
     public Look m_Look;
     public Camera cam;
 
+    public HealthBar healthBar;
+
     public Transform target;
 
     Vector3 rayOrigin = new Vector3(0.5f, 0.5f, 0f);
@@ -42,11 +44,14 @@ public class Motor : MonoBehaviour
 
     public Transform m_Checkpoint;
 
+    public int maxHealth = 100;
+    public int currentHealth;
 
     //public GameObject m_FootstepSound;
     private void Start()
     {
- 
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     void SpawnFootstep()
@@ -78,6 +83,20 @@ public class Motor : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             z += 1.0f;
+        }
+
+        // Take Damage Keybind (Testing HP BAR) 
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            TakeDamage(10);
+        }
+        // Take Damage Function 
+        void TakeDamage(int damage)
+        {
+            // Damaged
+            currentHealth -= damage;
+            // Reset Bar 
+            healthBar.SetHealth(currentHealth);
         }
 
 
