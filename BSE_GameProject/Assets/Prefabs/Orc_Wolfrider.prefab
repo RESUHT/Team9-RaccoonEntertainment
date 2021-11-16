@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7929341601183462312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1273547942927131916}
+  m_Layer: 0
+  m_Name: throwpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1273547942927131916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7929341601183462312}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.94000244, z: 1.258}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8187369618840497158}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8187369618840749112
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +175,7 @@ GameObject:
   - component: {fileID: 8835856591442505342}
   - component: {fileID: 6991626409829314812}
   - component: {fileID: 7665482786953481608}
+  - component: {fileID: 8441800622493265660}
   m_Layer: 13
   m_Name: Orc_Wolfrider
   m_TagString: Enemy
@@ -165,6 +196,7 @@ Transform:
   m_Children:
   - {fileID: 8187369618840578530}
   - {fileID: 8187369618840545884}
+  - {fileID: 1273547942927131916}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -241,7 +273,7 @@ NavMeshAgent:
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 2
+  m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -320,6 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 20
+  attackObj: {fileID: 0}
 --- !u!136 &6991626409829314812
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -346,6 +379,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0edbf5e22c07e224a8d28dcf31cb4432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 50
+--- !u!114 &8441800622493265660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8187369618840761594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8485b0fb1aa5b904686232a25456e164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwForce: 300
+  EnemyAttackPrefab: {fileID: 5700265488830772997, guid: 70fc345601cb9ce4a9141977c413c1bc,
+    type: 3}
+  player: {fileID: 0}
+  castPoint: {fileID: 1273547942927131916}
+  HasAttacked: 0
+  interval: 2
 --- !u!1 &8187369618840761864
 GameObject:
   m_ObjectHideFlags: 0

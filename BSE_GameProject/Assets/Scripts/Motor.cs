@@ -42,11 +42,15 @@ public class Motor : MonoBehaviour
 
     public Transform m_Checkpoint;
 
+    public int maxHP = 100;
+    private int currHP;
+
+    public int score = 0;
 
     //public GameObject m_FootstepSound;
     private void Start()
     {
- 
+        currHP = maxHP;
     }
 
     void SpawnFootstep()
@@ -220,5 +224,9 @@ public class Motor : MonoBehaviour
         focus = null;
     }
 
+    public void TakeDamage(int damage)
+    {
+        currHP -= damage;
 
+    }
 }

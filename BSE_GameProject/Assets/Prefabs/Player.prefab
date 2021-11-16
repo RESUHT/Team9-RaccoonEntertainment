@@ -77,6 +77,8 @@ GameObject:
   - component: {fileID: 4474859125874078007}
   - component: {fileID: 6400535380951207023}
   - component: {fileID: 4179041355596505488}
+  - component: {fileID: 1022166286433991773}
+  - component: {fileID: 7477309885891217122}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -169,7 +171,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_AirMomentumMult: 0
+  m_AirMomentumMult: 0.5
   m_GroundedTimer: 0
   m_DistanceTravelled: 0
   m_FeetPosition: {fileID: 1989333907249959677}
@@ -283,6 +285,32 @@ MonoBehaviour:
   manaRegen:
     baseValue: 20
   maxHealth: 100
+--- !u!114 &1022166286433991773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3679243387897299545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcfa08bd694e4d542bdf8da9992db6d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 100
+--- !u!114 &7477309885891217122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3679243387897299545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86737d57c8be1de40a52505f367b5c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &5920096719428905676
 GameObject:
   m_ObjectHideFlags: 0
