@@ -34,6 +34,7 @@ public class Motor : MonoBehaviour
 
     public bool m_IsRightFoot = true;
 
+    public Transform m_Checkpoint;
 
 
     //public GameObject m_FootstepSound;
@@ -82,6 +83,12 @@ public class Motor : MonoBehaviour
 
         }
 
+        // Checkpoint Code 
+        if (transform.position.y < -15.0f)
+        {
+            transform.position = m_Checkpoint.position;
+            m_MoveSpeed = 0;
+        }
 
 
         Vector3 inputMove = new Vector3(x, 0.0f, z);
