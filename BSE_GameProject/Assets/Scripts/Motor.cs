@@ -37,6 +37,7 @@ public class Motor : MonoBehaviour
 
     public bool m_IsRightFoot = true;
 
+    public Transform m_Checkpoint;
 
 
     //public GameObject m_FootstepSound;
