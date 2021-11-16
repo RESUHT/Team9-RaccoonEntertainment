@@ -32,6 +32,9 @@ public class Motor : MonoBehaviour
     public float m_JumpFootstepTimer = 0.0f;
     public float m_JumpFootstepCooldown = 0.5f;
 
+    //Checkpoint
+    public Transform m_Checkpoint;
+
     public bool m_IsRightFoot = true;
 
 
@@ -82,6 +85,12 @@ public class Motor : MonoBehaviour
 
         }
 
+        // Checkpoint Code 
+        if (transform.position.y < -15.0f)
+        {
+            transform.position = m_Checkpoint.position;
+            m_MoveSpeed = 0;
+        }
 
 
         Vector3 inputMove = new Vector3(x, 0.0f, z);
