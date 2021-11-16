@@ -6,6 +6,11 @@ public class Motor : MonoBehaviour
 {
     public CharacterController m_Controller;
     public Look m_Look;
+    public Camera cam;
+
+    public Transform target;
+
+    Vector3 rayOrigin = new Vector3(0.5f, 0.5f, 0f);
 
     public float m_MoveSpeed = 8.0f;
     public float m_Gravity = 1.0f;
@@ -14,6 +19,7 @@ public class Motor : MonoBehaviour
     public float m_SprintModifier = 2.0f;
     public float m_GroundedLenience = 0.25f;
 
+    public Interactable focus;
 
     public Vector3 m_Velocity = Vector3.zero;
     public bool m_Grounded = false;
@@ -172,9 +178,49 @@ public class Motor : MonoBehaviour
             m_MoveSpeed = 8.0f;
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (focus = null)
+            {
+                Ray ray = Camera.main.ViewportPointToRay(rayOrigin);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit, 100))
+                {
+                    Interactable interactable = hit.collider.GetComponent<Interactable>();
+                    if (interactable != null)
+                    {
+                        SetFocus(interactable);
+                    }
+                }
+            }
+            else
+            {
+                RemoveFocus();
+            }
+        }
 
 
+    }
 
+
+    void SetFocus(Interactable newFocus)
+    {
+        if (newFocus != focus)
+        {
+            if (focus != null)
+                focus.OnDefocused();
+            focus = newFocus;
+        }
+        
+        newFocus.OnFocused(transform);
+    }
+
+    void RemoveFocus()
+    {
+        if (focus != null)
+            focus.OnDefocused();
+        focus = null;
     }
 
 
