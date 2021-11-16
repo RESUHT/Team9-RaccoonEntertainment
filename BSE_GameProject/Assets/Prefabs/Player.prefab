@@ -28,7 +28,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 901606035552503772}
+<<<<<<< HEAD
   m_RootOrder: 1
+=======
+  m_RootOrder: 0
+>>>>>>> a07a8ceb802922ab449eefd8916dfef1d9793819
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2836157854717866546
 GameObject:
@@ -58,7 +62,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 901606035552503772}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3679243387897299545
 GameObject:
@@ -74,6 +78,7 @@ GameObject:
   - component: {fileID: 7735501605735139874}
   - component: {fileID: 5359825526576723915}
   - component: {fileID: 4720525039198277510}
+  - component: {fileID: 4474859125874078007}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -184,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a40ae23474bfe5743a14900d3dd3fbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DashSfx: {fileID: 3679243387897299545}
+  DashSfx: {fileID: 0}
   m_DashSpeed: 25
   m_DashTime: 0.15
   m_CanDash: 0
@@ -219,6 +224,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportTarget: {fileID: 3679243387897299545}
   teleportDestination: {fileID: 7610941506964129489}
+--- !u!114 &4474859125874078007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3679243387897299545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555eaefbf4ef9694e84025b3dfa2410f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwForce: 700
+  FireballPrefab: {fileID: 8247834743366785036, guid: cd02916da6ffcbe4dbe5d0f68d10bf2f,
+    type: 3}
+  castPoint: {fileID: 1873846315043103869}
 --- !u!1 &5920096719428905676
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +271,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.756, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1873846315043103869}
   - {fileID: 2212178345932914278}
   - {fileID: 1873846315043103869}
   m_Father: {fileID: 7610941506964129489}
