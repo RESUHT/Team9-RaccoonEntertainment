@@ -10,6 +10,7 @@ public class Fireball : MonoBehaviour
     public GameObject ExplosionEffect;
     public float blastRadius = 5f;
     public float explosionForce = 700f;
+    public int damage = 20;
 
 
 
@@ -52,4 +53,17 @@ public class Fireball : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        Explode();
+
+        if(collision.gameObject.tag == "Enemy")
+        {
+
+            EnemyTarget target = collision.transform.gameObject.GetComponent<EnemyTarget>();
+            target.ApplyDamage(damage);
+
+        }
+        
+    }
 }

@@ -15,7 +15,7 @@ public class Interactable : MonoBehaviour
         //this method is meant to be overridden
     }
 
-    private void Update()
+    void Update()
     {
         if(isFocused && !hasInteracted)
         {

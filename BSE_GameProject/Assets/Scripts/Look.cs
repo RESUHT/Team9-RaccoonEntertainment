@@ -22,17 +22,24 @@ public class Look : MonoBehaviour
 
     private void LockCursor()
     {
-        Cursor.visible = !m_CursorLocked;
-        Cursor.lockState = CursorLockMode.Locked;
+        if (m_CursorLocked)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            //m_CursorLocked = !m_CursorLocked;
-            //LockCursor();
-            //Cursor.visible = !Cursor.visible;
+            m_CursorLocked = !m_CursorLocked;
+            LockCursor();
         }
 
         if (!m_CursorLocked)
