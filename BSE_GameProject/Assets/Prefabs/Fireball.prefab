@@ -4783,5 +4783,12 @@ MonoBehaviour:
   delay: 3
   ExplosionEffect: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
     type: 3}
+  ExplosionEffect2: {fileID: 1329845292236604, guid: 9bba9cf244c53c5439505dfc96fdd11c,
+    type: 3}
+  ExplosionEffect3: {fileID: 0}
+  ExplosionEffect4: {fileID: 1025285306637258, guid: d8f0099df63275647a8bcf646df1ca00,
+    type: 3}
   blastRadius: 5
   explosionForce: 700
+  damage: 20
+  BoomSfx: {fileID: 788083292765030003, guid: 2d0f9fba237966e42be541d520f13ab1, type: 3}

@@ -79,3 +79,15 @@ Stone Brick Wall 001 by Rico Cilliers. CC0 license. (https://polyhaven.com/a/sto
 Unity Particle Pack by Unity Technologies - Unity Asset Store, Extension Asset
 
 "Lich" (https://skfb.ly/ZTUH) by pigruy is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+oof -qdo.wav by qdo - https://freesound.org/people/qdo/sounds/528732/
+
+Whoosh by qubodup - https://freesound.org/people/qubodup/sounds/60013/
+
+Swoosh by EminYILDIRIM - https://freesound.org/people/EminYILDIRIM/sounds/555057/
+
+explosion_big_03.ogg by derplayer - https://freesound.org/people/derplayer/sounds/587198/
+
+Evolution by Benjamin Tissot - https://www.bensound.com/royalty-free-music/track/evolution-epic-nature
+
+Far the Outpost 2 - https://wowsound.com/product/far-the-outpost-2/

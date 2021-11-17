@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: -2613777167882752100}
   - component: {fileID: 4825920697884415710}
   - component: {fileID: 1999259214818405932}
-  m_Layer: 12
+  - component: {fileID: 2274855703388258743}
+  m_Layer: 14
   m_Name: Health
-  m_TagString: Interactable
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
-  item: {fileID: 11400000, guid: 3d219d8827272f047a3e9444144a7f49, type: 2}
+  item: {fileID: 0}
 --- !u!114 &-2613777167882752100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,3 +152,18 @@ MonoBehaviour:
   degreesPerSecond: 15
   amplitude: 0.5
   frequency: 1
+--- !u!114 &2274855703388258743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083064553826581555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac5864bae76078941b2b5456357013cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: {fileID: 0}
+  m_Speed: 2
+  m_DRadius: 1

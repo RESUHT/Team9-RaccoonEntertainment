@@ -8,9 +8,13 @@ public class Fireball : MonoBehaviour
     float countdown;
     bool hasExploded = false;
     public GameObject ExplosionEffect;
+    public GameObject ExplosionEffect2;
+    public GameObject ExplosionEffect3;
+    public GameObject ExplosionEffect4;
     public float blastRadius = 5f;
     public float explosionForce = 700f;
     public int damage = 20;
+    public GameObject BoomSfx;
 
 
 
@@ -34,8 +38,11 @@ public class Fireball : MonoBehaviour
 
     void Explode()
     {
-        Destroy(Instantiate(ExplosionEffect, transform.position, transform.rotation), 1.5f);
-
+        Destroy(Instantiate(ExplosionEffect, transform.position, transform.rotation), 2f);
+        Destroy(Instantiate(ExplosionEffect2, transform.position, transform.rotation), 2f);
+        //Destroy(Instantiate(ExplosionEffect3, transform.position, transform.rotation), 2f);
+        Destroy(Instantiate(ExplosionEffect4, transform.position, transform.rotation), 2f);
+        Destroy(Instantiate(BoomSfx, transform.position, transform.rotation), 3f);
 
 
         Collider[] colliders = Physics.OverlapSphere(transform.position, blastRadius);
