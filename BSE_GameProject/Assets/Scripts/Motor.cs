@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Motor : MonoBehaviour
 {
     public CharacterController m_Controller;
     public Look m_Look;
+    public Camera cam;
+
+    public Transform target;
+
+    Vector3 rayOrigin = new Vector3(0.5f, 0.5f, 0f);
 
     public float m_MoveSpeed = 8.0f;
     public float m_Gravity = 1.0f;
@@ -14,6 +20,7 @@ public class Motor : MonoBehaviour
     public float m_SprintModifier = 2.0f;
     public float m_GroundedLenience = 0.25f;
 
+    public Interactable focus;
 
     public Vector3 m_Velocity = Vector3.zero;
     public bool m_Grounded = false;
@@ -34,12 +41,17 @@ public class Motor : MonoBehaviour
 
     public bool m_IsRightFoot = true;
 
+    public Transform m_Checkpoint;
 
+    public int maxHP = 100;
+    private int currHP;
+
+    public int score = 0;
 
     //public GameObject m_FootstepSound;
     private void Start()
     {
- 
+        currHP = maxHP;
     }
 
     void SpawnFootstep()
@@ -52,6 +64,12 @@ public class Motor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            SceneManager.LoadScene(0);
+        }
 
         float x = 0.0f;
         if (Input.GetKey(KeyCode.A))
@@ -82,6 +100,12 @@ public class Motor : MonoBehaviour
 
         }
 
+        // Checkpoint Code 
+        if (transform.position.y < -15.0f)
+        {
+            transform.position = m_Checkpoint.position;
+            m_MoveSpeed = 0;
+        }
 
 
         Vector3 inputMove = new Vector3(x, 0.0f, z);
@@ -162,10 +186,54 @@ public class Motor : MonoBehaviour
             m_MoveSpeed = 8.0f;
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (focus = null)
+            {
+                Ray ray = Camera.main.ViewportPointToRay(rayOrigin);
+                RaycastHit hit;
 
+                if (Physics.Raycast(ray, out hit, 100))
+                {
+                    Interactable interactable = hit.collider.GetComponent<Interactable>();
+                    if (interactable != null)
+                    {
+                        SetFocus(interactable);
+                    }
+                }
+            }
+            else
+            {
+                RemoveFocus();
+            }
+        }
 
 
     }
 
 
+    void SetFocus(Interactable newFocus)
+    {
+        if (newFocus != focus)
+        {
+            if (focus != null)
+                focus.OnDefocused();
+            focus = newFocus;
+        }
+        
+        newFocus.OnFocused(transform);
+    }
+
+    void RemoveFocus()
+    {
+        if (focus != null)
+            focus.OnDefocused();
+        focus = null;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currHP -= damage;
+
+    }
 }
